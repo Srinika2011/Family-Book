@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title> Fammily Book Web App</title>
+    </head>
+
+    <body>
+        <center>
+
+            <h1 id="heading"> My Family Book</h1>
+            <br>
+            <img id="image" style = "width: 500px; height: 450px;" src="Family.jpg">
+            <br>
+            <h3 id="name"></h3>
+            <br>
+            <button type="button" style = "padding: 5px; background-color: rgb(225, 166, 252); color: rgb(94, 0, 122); width: 100px; height: 30px;" id="button_next" onclick="next()">
+                Next
+            </button>
+
+            <script>
+                var names_array = ["Srinika", "Nitya", "Yuga", "Latha"];
+                var images_array = ["Srinika.png","Nitya.png","Yuga.png","Latha.png"]
+                var i = 0;
+
+                function next() {
+                    document.getElementById("image").src = images_array[i];
+                    document.getElementById("name").textContent = names_array[i];
+                    i++;
+                    if(i==4) {
+                        i=0;
+                    }
+                };
+
+            </script>
+
+
+        </center>
+    </body>
+</html>
